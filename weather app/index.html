@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WeatherNow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- Background Video -->
+<video autoplay muted loop id="bg-video">
+  <source id="video-source" src="videos/default.mp4" type="video/mp4">
+</video>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">WeatherNow</div>
+
+  <div class="menu-toggle">☰</div>
+
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Forecast</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+
+  <div class="auth-buttons">
+    <button class="login">Login</button>
+    <button class="signup">Sign Up</button>
+  </div>
+</nav>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="loginClose">&times;</span>
+    <h2>Login</h2>
+    <input type="text" placeholder="Username" id="loginUser">
+    <input type="password" placeholder="Password" id="loginPass">
+    <button onclick="loginUser()">Login</button>
+  </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="signupClose">&times;</span>
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Username" id="signupUser">
+    <input type="password" placeholder="Password" id="signupPass">
+    <button onclick="signupUser()">Sign Up</button>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+  <h1>Check Weather</h1>
+  <input type="text" id="city" placeholder="Enter city name" />
+  <button onclick="getWeather()">Get Weather</button>
+
+  <div class="weather-result" id="result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
